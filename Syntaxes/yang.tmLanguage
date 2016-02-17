@@ -6,8 +6,10 @@
 	<array>
 		<string>yang</string>
 	</array>
+	<key>keyEquivalent</key>
+	<string>^~@y</string>
 	<key>name</key>
-	<string>YANG</string>
+	<string>yang</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -27,7 +29,7 @@
 			<key>comment</key>
 			<string>leaf keyword</string>
 			<key>match</key>
-			<string>(leaf) ([a-zA-z0-9\-_]+)</string>
+			<string>(leaf) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.leaf.yang</string>
 		</dict>
@@ -48,7 +50,7 @@
 			<key>comment</key>
 			<string>leaf-list keyword</string>
 			<key>match</key>
-			<string>(leaf-list) ([a-zA-z0-9\-_]+)</string>
+			<string>(leaf-list) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.leaf-list.yang</string>
 		</dict>
@@ -69,7 +71,7 @@
 			<key>comment</key>
 			<string>list keyword</string>
 			<key>match</key>
-			<string>(list) ([a-zA-z0-9\-]+)</string>
+			<string>(list) ([a-zA-Z0-9\-]+)</string>
 			<key>name</key>
 			<string>statement.list.yang</string>
 		</dict>
@@ -90,7 +92,7 @@
 			<key>comment</key>
 			<string>key keyword</string>
 			<key>match</key>
-			<string>(key) ([a-zA-z0-9\-]+)</string>
+			<string>(key) ([a-zA-Z0-9\-]+)</string>
 			<key>name</key>
 			<string>statement.key.yang</string>
 		</dict>
@@ -111,7 +113,7 @@
 			<key>comment</key>
 			<string>choice keyword</string>
 			<key>match</key>
-			<string>(choice) ([a-zA-z0-9\-_]+)</string>
+			<string>(choice) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.choice.yang</string>
 		</dict>
@@ -132,7 +134,7 @@
 			<key>comment</key>
 			<string>container keyword</string>
 			<key>match</key>
-			<string>(container) ([a-zA-z0-9\-_]+)</string>
+			<string>(container) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.container.yang</string>
 		</dict>
@@ -153,7 +155,7 @@
 			<key>comment</key>
 			<string>grouping keyword</string>
 			<key>match</key>
-			<string>(grouping) ([a-zA-z0-9\-_]+)</string>
+			<string>(grouping) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.grouping.yang</string>
 		</dict>
@@ -174,7 +176,7 @@
 			<key>comment</key>
 			<string>uses keyword</string>
 			<key>match</key>
-			<string>(uses) ([a-zA-z0-9\-_:]+)</string>
+			<string>(uses) ([a-zA-Z0-9\-_:]+)</string>
 			<key>name</key>
 			<string>statement.uses.yang</string>
 		</dict>
@@ -189,15 +191,82 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
+					<string>entity.name.type.class</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
 					<string>constant.character</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.regexp</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>type keyword</string>
 			<key>match</key>
-			<string>(type) +([a-zA-Z0-9;:\-_]+)</string>
+			<string>(type) ([a-zA-Z0-9;:\-_]+)</string>
 			<key>name</key>
 			<string>statement.type.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>constant.character</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.regexp</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>mandatory keyword, tldr193</string>
+			<key>match</key>
+			<string>(mandatory) ([truefalse]+)</string>
+			<key>name</key>
+			<string>statement.manditory.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>string.regexp</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>key keyword, tldr193</string>
+			<key>match</key>
+			<string>(key) +([\"a-zA-Z0-9\-_: ;]+)</string>
+			<key>name</key>
+			<string>statement.key.yang</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -295,7 +364,7 @@
 			<key>comment</key>
 			<string>grouping keyword</string>
 			<key>match</key>
-			<string>(prefix) ([a-zA-z0-9\-_]+)</string>
+			<string>(prefix) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>import.prefix.yang</string>
 		</dict>
@@ -335,6 +404,22 @@
 			<string>(namespace)</string>
 			<key>name</key>
 			<string>namespace.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>grouping keyword</string>
+			<key>match</key>
+			<string>(prefix)</string>
+			<key>name</key>
+			<string>prefix.yang</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -401,7 +486,7 @@
 			<key>comment</key>
 			<string>typedef keyword</string>
 			<key>match</key>
-			<string>(typedef) ([a-zA-z0-9\-_]+)</string>
+			<string>(typedef) ([a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.typedef.yang</string>
 		</dict>
@@ -438,9 +523,82 @@
 			<key>comment</key>
 			<string>augment keyword</string>
 			<key>match</key>
-			<string>(augment) ([\":/a-zA-z0-9\-_]+)</string>
+			<string>(augment) ([\":/a-zA-Z0-9\-_]+)</string>
 			<key>name</key>
 			<string>statement.augment.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Identity keyword. tldr193</string>
+			<key>match</key>
+			<string>(identity) ([\":/a-zA-Z0-9\-_]+)</string>
+			<key>name</key>
+			<string>identity.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Identity keyword. tldr193</string>
+			<key>match</key>
+			<string>(base) ([\":/a-zA-Z0-9\-_]+)</string>
+			<key>name</key>
+			<string>identity.base.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.class</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>constant.character</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Default keyword. tldr193</string>
+			<key>match</key>
+			<string>(default) ([\":/a-zA-Z0-9\-_]+)</string>
+			<key>name</key>
+			<string>default.yang</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -475,10 +633,73 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>namespaced keyword</string>
+			<key>match</key>
+			<string>([a-zA-Z0-9\-_:]+) ([a-zA-Z0-9\-_]+)</string>
+			<key>name</key>
+			<string>namespacedkeyword.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>other keyword</string>
+			<key>match</key>
+			<string>([a-zA-Z0-9\-_]+):([a-zA-Z0-9\-_]+)</string>
+			<key>name</key>
+			<string>other.yang</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>standalone keyword</string>
+			<key>match</key>
+			<string>([a-zA-Z0-9\-_]+)</string>
+			<key>name</key>
+			<string>standalone.yang</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.yang</string>
+	<string>yang.plist</string>
 	<key>uuid</key>
-	<string>9ef30d21-cb3f-4665-b28e-23175f3c3376</string>
+	<string>841B57AC-D241-4DBB-8766-BE2C4296C582</string>
 </dict>
 </plist>
