@@ -6,7 +6,7 @@ You can install this bundle in TextMate by opening the preferences and going to 
 Now you too can Yang in TextMate. Yippee.
 
 # Credits
-Yang tmLanguage file by Arden Packeer (https://github.com/apackeer). 
+Original Yang tmLanguage file by Arden Packeer (https://github.com/apackeer). 
 
 # License
 
