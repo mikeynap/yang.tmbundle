@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>zancbyvg@pvfpb.pbz</string>
+	<key>contactName</key>
+	<string>Michael Napolitano</string>
+	<key>description</key>
+	<string>Yang grammar for TextMate.</string>
+	<key>name</key>
+	<string>YANG</string>
+	<key>uuid</key>
+	<string>E75C1E5E-A3C1-4B69-8C5D-37C2C85D2732</string>
+</dict>
+</plist>
